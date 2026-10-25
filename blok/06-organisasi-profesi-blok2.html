@@ -1,0 +1,227 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --rasp: #B3205F;
+  --rasp-d: #8A154A;
+  --teal: #1E8F8C;
+  --teal-d: #146A68;
+  --sun: #F4B52E;
+  --leaf: #2F7D3B;
+  --ink: #1F2A33;
+  --mute: #5B6872;
+  --line: #D9E6EA;
+  --card: #FFFFFF;
+  --bg-soft: #F6FAFB;
+  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
+img { max-width: 100%; height: auto; display: block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<style>
+.sh { margin-bottom: 24px; }
+.sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
+.sub { color: var(--mute); max-width: 65ch; font-size: 14.5px; }
+
+.list-org { display: flex; flex-direction: column; gap: 28px; }
+.org-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+  overflow: hidden; box-shadow: 0 8px 24px rgba(21,70,80,.06); padding: 26px 28px;
+}
+.org-card h3 { font-size: clamp(20px, 2.3vw, 24px); color: var(--ink); margin-bottom: 6px; }
+.org-badge {
+  display: inline-block; font-size: 12px; font-weight: 700; color: var(--teal-d);
+  background: #E6F6F5; border-radius: 999px; padding: 4px 14px; margin-bottom: 12px;
+}
+.sk-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; margin-top: 14px;
+}
+.sk-item {
+  border-radius: 14px; border: 1px solid var(--line); overflow: hidden; background: #FFFFFF;
+  display: flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  box-shadow: 0 4px 12px rgba(21,70,80,.05);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.sk-item:hover { transform: translateY(-3px); border-color: var(--teal); box-shadow: 0 8px 24px rgba(30,143,140,.18); }
+.sk-img-box {
+  position: relative; overflow: hidden; background: #F8FBFC; border-bottom: 1px solid var(--line);
+}
+.sk-img-box img {
+  width: 100%; height: auto; display: block;
+}
+.zoom-pill {
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(31,42,51,0.78); backdrop-filter: blur(4px);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 5px 12px; border-radius: 999px;
+  opacity: 0; transition: opacity .2s ease; pointer-events: none;
+}
+.sk-item:hover .zoom-pill { opacity: 1; }
+.sk-caption { padding: 10px 12px; font-size: 13px; font-weight: 600; text-align: center; color: var(--ink); background: #FAFDFD; }
+
+@media (max-width: 680px) {
+  .org-card { padding: 20px 16px; }
+  .sk-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="wrap">
+  <div class="sh">
+    <p class="eyebrow">Portofolio Guru PAUD</p>
+    <h2>Pengalaman Organisasi Profesi</h2>
+    <p class="sub">Bagian 2: SK Tim Pencegahan Kekerasan (TPPK), Bendahara Gugus Adenium, serta Kepengurusan Komunitas Belajar (Kombel).</p>
+  </div>
+
+  <div class="list-org">
+    <!-- Org 6 -->
+    <article class="org-card">
+      <span class="org-badge">Tim Satuan Pendidikan Kemendikbudristek</span>
+      <h3>TIM PENCEGAHAN DAN PENANGANAN KEKERASAN</h3>
+      <div class="sk-grid">
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-14.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-14.jpg" alt="SK TPPK Halaman 1" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">SK TPPK Hal. 1</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-15.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-15.jpg" alt="SK TPPK Halaman 2" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">SK TPPK Hal. 2</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-16.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-16.jpg" alt="Susunan Anggota TPPK" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Susunan Anggota TPPK</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-17.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-17.jpg" alt="Pernyataan Komitmen" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Pernyataan Komitmen</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-18.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-18.jpg" alt="Registrasi Portal TPPK" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Registrasi Portal TPPK</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-19.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-19.jpg" alt="Bukti Unggah Dashboard" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Bukti Unggah Dashboard</div>
+        </a>
+      </div>
+    </article>
+
+    <!-- Org 7 -->
+    <article class="org-card">
+      <span class="org-badge">Gugus Sekolah Tingkat Kecamatan</span>
+      <h3>Bendahara Gugus PAUD Adenium</h3>
+      <div class="sk-grid">
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-20.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-20.jpg" alt="Pindai SK Bendahara Gugus" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Pindai SK Bendahara Gugus</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-21.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-21.jpg" alt="Lampiran Pengurus Gugus" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Lampiran Pengurus Gugus</div>
+        </a>
+      </div>
+    </article>
+
+    <!-- Org 8 -->
+    <article class="org-card">
+      <span class="org-badge">Komunitas Belajar AntarSekolah</span>
+      <h3>Sekretaris Komunitas Belajar SEMARAK Gugus PAUD Adenium</h3>
+      <div class="sk-grid">
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-22.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-22.jpg" alt="SK Kombel SEMARAK" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">SK Kombel SEMARAK</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-23.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-23.jpg" alt="Struktur Kombel Gugus" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Struktur Kombel Gugus</div>
+        </a>
+      </div>
+    </article>
+
+    <!-- Org 9 -->
+    <article class="org-card">
+      <span class="org-badge">Komunitas Belajar IntraSekolah</span>
+      <h3>Ketua Komunitas Belajar TK PGRI Prunggahan Kulon</h3>
+      <div class="sk-grid">
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-24.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-24.jpg" alt="SK Ketua Kombel Sekolah" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">SK Ketua Kombel Sekolah</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-25.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-25.jpg" alt="Program Kerja Kombel" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Program Kerja Kombel</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-26.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-26.jpg" alt="Sertifikat Registrasi PMM" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Sertifikat Registrasi PMM</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-27.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-27.jpg" alt="Profil Kombel di PMM" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Profil Kombel di PMM</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-28.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-28.jpg" alt="Pengesahan Pengawas Halaman 1" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Pengesahan Pengawas Hal. 1</div>
+        </a>
+        <a class="sk-item" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-29.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <div class="sk-img-box">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/06-pengalaman-organisasi-profesi-img-29.jpg" alt="Pengesahan Pengawas Halaman 2" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </div>
+          <div class="sk-caption">Pengesahan Pengawas Hal. 2</div>
+        </a>
+      </div>
+    </article>
+  </div>
+</div>

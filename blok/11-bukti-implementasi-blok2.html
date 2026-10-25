@@ -1,0 +1,218 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --rasp: #B3205F;
+  --rasp-d: #8A154A;
+  --teal: #1E8F8C;
+  --teal-d: #146A68;
+  --sun: #F4B52E;
+  --leaf: #2F7D3B;
+  --ink: #1F2A33;
+  --mute: #5B6872;
+  --line: #D9E6EA;
+  --card: #FFFFFF;
+  --bg-soft: #F6FAFB;
+  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  text-decoration: none; font-weight: 700; font-size: 14px; padding: 10px 20px;
+  border-radius: 999px; background: var(--rasp); color: #fff; border: 2px solid var(--rasp);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-2px); background: var(--rasp-d); border-color: var(--rasp-d); box-shadow: 0 6px 16px rgba(179,32,95,.25); }
+.btn.ghost { background: transparent; color: var(--rasp); border-color: var(--rasp); }
+.btn.ghost:hover { background: #fff; transform: translateY(-2px); }
+.btn.teal { background: var(--teal); border-color: var(--teal); color: #fff; }
+.btn.teal:hover { background: var(--teal-d); border-color: var(--teal-d); }
+.btn.sun { background: var(--sun); border-color: var(--sun); color: #2A1800; }
+.btn.sun:hover { background: #E09E19; }
+.btn.leaf { background: var(--leaf); border-color: var(--leaf); color: #fff; }
+.btn.leaf:hover { background: #23632E; }
+.btn-sm { font-size: 13px; padding: 6px 16px; }
+.foto {
+  background-color: #CFE8EC;
+  background-image: linear-gradient(135deg, #BFE3E6, #F7D6E4);
+  background-size: cover; background-position: center;
+}
+img { max-width: 100%; height: auto; display: block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<style>
+.sh { margin-bottom: 22px; }
+.sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
+.sub { color: var(--mute); max-width: 65ch; font-size: 14.5px; }
+.bukti-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 22px;
+  overflow: hidden; box-shadow: 0 8px 24px rgba(21,70,80,.07); margin-bottom: 26px;
+  padding: 28px;
+}
+.bukti-card h3 { font-size: 24px; color: var(--ink); margin-bottom: 8px; }
+.steps-timeline {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
+  margin: 16px 0;
+}
+.step-box {
+  background: #FAFDFD; border: 1px solid var(--line); border-top: 4px solid var(--c);
+  border-radius: 12px; padding: 14px 16px;
+}
+.step-box .num { font-size: 12px; font-weight: 700; color: var(--c); text-transform: uppercase; margin-bottom: 2px; }
+.step-box .title { font-weight: 700; font-size: 14px; color: var(--ink); margin-bottom: 4px; }
+.action-buttons {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+.day-schedule {
+  background: #F6FAFB; border-radius: 14px; padding: 16px 20px; margin: 14px 0;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.day-item b { color: var(--rasp-d); font-family: var(--font-display); font-size: 16px; }
+.day-item p { font-size: 14px; color: #33434D; margin-top: 2px; }
+.games-list {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px;
+  margin-top: 10px;
+}
+.game-sub {
+  background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; padding: 14px;
+}
+.game-sub h5 { font-family: var(--font-display); font-size: 16px; color: var(--ink); margin-bottom: 4px; }
+.game-sub p { font-size: 13px; color: var(--mute); line-height: 1.5; }
+</style>
+<div class="wrap">
+  <div class="sh">
+    <p class="eyebrow">Aksi Nyata di Kelas</p>
+    <h2>Bukti Implementasi Karya Inovasi</h2>
+    <p class="sub">Bagian 2: Tahapan pelaksanaan PEMANDU permainan tradisional, Gebyar Bunda interpreneur cilik, dan Cooking Class Tahu Crispy.</p>
+  </div>
+
+  <!-- Karya 3: PEMANDU -->
+  <article class="bukti-card">
+    <span class="eyebrow" style="color:var(--leaf);">Dokumentasi Pelaksanaan 2 Hari</span>
+    <h3>PEMANDU (PERMAINAN ANAK JAMAN DULU)</h3>
+    
+    <div style="margin-top:12px;"><p class="eyebrow">Tahapan Koordinasi:</p></div>
+    <div class="steps-timeline">
+      <div class="step-box" style="--c:#2F7D3B"><div class="num">1</div><div class="title">Koordinasi Kepala TK</div></div>
+      <div class="step-box" style="--c:#2F7D3B"><div class="num">2</div><div class="title">Rekan Sejawat</div></div>
+      <div class="step-box" style="--c:#2F7D3B"><div class="num">3</div><div class="title">Sosialisasi Wali Murid</div></div>
+      <div class="step-box" style="--c:#2F7D3B"><div class="num">4</div><div class="title">Implementasi Lapangan</div></div>
+    </div>
+
+    <div class="day-schedule">
+      <div class="day-item">
+        <b>Kegiatan Hari ke-1:</b>
+        <p>&bull; Menyanyikan lagu “Rukun”<br>
+        &bull; Menonton video tentang macam-macam permainan tradisional<br>
+        &bull; Guru menjelaskan dan memberikan contoh cara memainkan permainan tradisional<br>
+        &bull; Anak mencari bahan permainan di lingkungan sekitar sekolah<br>
+        &bull; Anak bersama orang tua membuat mahkota dari daun Nangka untuk pelaksanaan kegiatan</p>
+      </div>
+      <div class="day-item">
+        <b>Kegiatan Hari ke-2 (Lapangan Kodok Bendhe):</b>
+        <p>Dari sekolah menuju lapangan Kodok Bendhe. Membagi anak menjadi 5 kelompok dengan 5 macam permainan bergiliran:</p>
+      </div>
+    </div>
+
+    <div class="games-list">
+      <div class="game-sub">
+        <h5>1. Lompat Tali</h5>
+        <p>Tali sambungan karet gelang 3-5 meter. Dua pemegang tali, lainnya melompati ketinggian bergradasi (mata kaki hingga seacungan tangan). Melatih otot kaki, koordinasi tubuh, kepadatan tulang, kejujuran, dan kesederhanaan.</p>
+      </div>
+      <div class="game-sub">
+        <h5>2. Serokan</h5>
+        <p>Membutuhkan biji-bijian dan daun untuk menyerok biji. Melatih kesabaran, kejujuran, konsentrasi, berlapang dada, dan bermain tanpa biaya.</p>
+      </div>
+      <div class="game-sub">
+        <h5>3. Obag Tani / Engklek</h5>
+        <p>Keterampilan melompat di atas kotak tanah berpola tertentu. Melatih koordinasi motorik, keseimbangan, konsentrasi, sosial emosional, dan keterampilan matematika.</p>
+      </div>
+      <div class="game-sub">
+        <h5>4. Dakon / Congklak</h5>
+        <p>Papan berlubang dan biji-bijian/kerikil. Melatih konsentrasi, strategi, motorik halus, stimulasi kognitif, dan matematika.</p>
+      </div>
+      <div class="game-sub">
+        <h5>5. Jinas</h5>
+        <p>Keahlian menangkap batu kerikil ke dalam lingkaran arena sesuai jumlah yang ditentukan. Meningkatkan motorik halus, koordinasi, dan stimulasi kognitif.</p>
+      </div>
+    </div>
+
+    <p style="font-size:13.5px;color:var(--mute);margin-top:14px;padding:12px;background:#F6FAFB;border-radius:10px;">
+      <i>Kegiatan Berbagi Praktik Baik:</i> Berbagi praktik baik tentang Wawasan Kebangsaan dan PEMANDU bersama seluruh anggota Gugus PAUD Adenium kecamatan Semanding yang dihadiri pula oleh Ibu Pengawas TK, Ibu Ketua IGTKI PGRI, dan Ibu Ketua HIMPAUDI kecamatan Semanding.
+    </p>
+  </article>
+
+  <!-- Karya 4: Gebyar Bunda -->
+  <article class="bukti-card">
+    <span class="eyebrow" style="color:var(--sun);">Dokumentasi Pelaksanaan 3 Hari</span>
+    <h3>GEBYAR BUNDA (BUSINESS DAY) INTERPRENEUR CILIK</h3>
+    
+    <div class="steps-timeline">
+      <div class="step-box" style="--c:#F4B52E"><div class="num">1</div><div class="title">Koordinasi Kepala TK</div></div>
+      <div class="step-box" style="--c:#F4B52E"><div class="num">2</div><div class="title">Rekan Sejawat</div></div>
+      <div class="step-box" style="--c:#F4B52E"><div class="num">3</div><div class="title">Sosialisasi Orang Tua</div></div>
+      <div class="step-box" style="--c:#F4B52E"><div class="num">4</div><div class="title">Aksi Pasar Mini</div></div>
+    </div>
+
+    <div class="day-schedule">
+      <div class="day-item">
+        <b>Kegiatan Hari ke-1:</b>
+        <p>&bull; Menonton video "Suasana Pasar"<br>
+        &bull; Bermain "Pasaran" dengan media pelepah dan batang pisang bergantian peran penjual-pembeli<br>
+        &bull; Anak dibagi 3 kelompok: mengiris pisang, menakar bahan adonan, dan menggoreng pisang<br>
+        &bull; Pisang goreng dinikmati bersama saat jam istirahat</p>
+      </div>
+      <div class="day-item">
+        <b>Kegiatan Hari ke-2:</b>
+        <p>&bull; Menonton video "Cara Membuat Jus Jambu"<br>
+        &bull; Dibagi 3 kelompok: mengupas jambu, menakar bahan & mengiris, memblender & menuang ke gelas<br>
+        &bull; Jus jambu dinikmati bersama saat istirahat</p>
+      </div>
+      <div class="day-item">
+        <b>Kegiatan Hari ke-3 (Puncak Gebyar Bunda):</b>
+        <p>&bull; Membawa makanan/minuman dari rumah hasil koordinasi orang tua<br>
+        &bull; Menata barang dagangan di meja stan masing-masing<br>
+        &bull; Pembagian peran penjual dan pembeli bergantian (Kelompok A dan B)<br>
+        &bull; Memakai keranjang belanja kecil untuk bertransaksi jual beli secara menyenangkan</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Karya 5: Cooking Class Tahu Crispy -->
+  <article class="bukti-card">
+    <span class="eyebrow" style="color:var(--teal-d);">Dokumentasi Pelaksanaan 3 Hari</span>
+    <h3>COOCKING CLASS "TAHU CRISPY"</h3>
+    
+    <div class="steps-timeline">
+      <div class="step-box" style="--c:#1E8F8C"><div class="num">1</div><div class="title">Koordinasi Kepala TK</div></div>
+      <div class="step-box" style="--c:#1E8F8C"><div class="num">2</div><div class="title">Rekan Sejawat</div></div>
+      <div class="step-box" style="--c:#1E8F8C"><div class="num">3</div><div class="title">Sosialisasi Wali Murid</div></div>
+      <div class="step-box" style="--c:#1E8F8C"><div class="num">4</div><div class="title">Cooking Class</div></div>
+    </div>
+
+    <div class="day-schedule">
+      <div class="day-item">
+        <b>Kegiatan Hari ke-1:</b>
+        <p>&bull; Menonton video "Cara Membuat Tahu"<br>
+        &bull; Membuat karya kolase menggunakan biji kedelai<br>
+        &bull; Menimbang kedelai untuk melatih konsep takaran</p>
+      </div>
+      <div class="day-item">
+        <b>Kegiatan Hari ke-2:</b>
+        <p>&bull; Kunjungan edukatif langsung ke Pabrik Tahu dekat sekolah untuk melihat proses pembuatan dan pemasaran</p>
+      </div>
+      <div class="day-item">
+        <b>Kegiatan Hari ke-3:</b>
+        <p>&bull; Dibagi 3 kelompok: mengiris tahu, menakar adonan bumbu tahu crispy, menggoreng tahu crispy bergantian<br>
+        &bull; Tahu crispy matang disantap bersama saat jam istirahat sekolah</p>
+      </div>
+    </div>
+  </article>
+</div>

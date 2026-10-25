@@ -1,0 +1,230 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --rasp: #B3205F;
+  --rasp-d: #8A154A;
+  --teal: #1E8F8C;
+  --teal-d: #146A68;
+  --sun: #F4B52E;
+  --leaf: #2F7D3B;
+  --ink: #1F2A33;
+  --mute: #5B6872;
+  --line: #D9E6EA;
+  --card: #FFFFFF;
+  --bg-soft: #F6FAFB;
+  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  text-decoration: none; font-weight: 700; font-size: 14px; padding: 10px 20px;
+  border-radius: 999px; background: var(--rasp); color: #fff; border: 2px solid var(--rasp);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-2px); background: var(--rasp-d); border-color: var(--rasp-d); box-shadow: 0 6px 16px rgba(179,32,95,.25); }
+.btn.ghost { background: transparent; color: var(--rasp); border-color: var(--rasp); }
+.btn.ghost:hover { background: #fff; transform: translateY(-2px); }
+.btn-sm { font-size: 13px; padding: 6px 16px; }
+img { max-width: 100%; height: auto; display: block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<style>
+.sh { margin-bottom: 24px; }
+.sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
+.sub { color: var(--mute); max-width: 65ch; font-size: 14.5px; }
+
+.list-act { display: flex; flex-direction: column; gap: 32px; }
+.act-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(21,70,80,.06); padding: 26px 28px;
+  display: flex; flex-direction: column; gap: 18px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.act-card:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(21,70,80,.10); }
+
+.act-header { display: flex; flex-direction: column; gap: 8px; }
+.meta-chip-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.chip-date {
+  background: var(--rasp); color: #fff; font-weight: 700; font-size: 12px;
+  border-radius: 999px; padding: 3px 12px; font-variant-numeric: tabular-nums;
+}
+.chip-loc {
+  font-size: 12.5px; font-weight: 600; color: var(--teal-d); background: #E6F6F5;
+  border-radius: 999px; padding: 3px 12px;
+}
+.act-header h3 { font-size: clamp(20px, 2.4vw, 24px); color: var(--rasp-d); line-height: 1.25; margin: 0; }
+.act-header p { color: #33434D; font-size: 14.5px; line-height: 1.65; margin: 0; }
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 4px;
+}
+.doc-item {
+  margin: 0; display: flex; flex-direction: column; gap: 8px;
+}
+.doc-link {
+  position: relative; display: block; border-radius: 12px; overflow: hidden;
+  background: #FFFFFF; border: 1px solid #D9E6EA;
+  box-shadow: 0 4px 12px rgba(21,70,80,.05);
+  text-decoration: none; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.doc-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--teal);
+  box-shadow: 0 8px 20px rgba(30,143,140,.18);
+}
+.doc-link img {
+  width: 100%; height: auto; display: block;
+  background: #F4F8FA;
+}
+.zoom-pill {
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(31,42,51,0.78); backdrop-filter: blur(4px);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 5px 12px; border-radius: 999px;
+  opacity: 0; transition: opacity .2s ease; pointer-events: none;
+}
+.doc-link:hover .zoom-pill { opacity: 1; }
+.doc-caption {
+  font-size: 12.5px; font-weight: 600; color: var(--mute);
+  text-align: center; margin: 0;
+}
+
+@media (max-width: 680px) {
+  .doc-grid { grid-template-columns: 1fr; }
+  .act-card { padding: 20px 16px; }
+}
+</style>
+
+<div class="wrap">
+  <div class="sh">
+    <p class="eyebrow">Portofolio Guru PAUD</p>
+    <h2>Kegiatan Pengembangan Diri</h2>
+    <p class="sub">Bagian 1: Pelatihan, workshop inovasi deep learning, inspiratif, dan simposium tingkat provinsi.</p>
+  </div>
+
+  <div class="list-act">
+    <!-- Kegiatan 1 -->
+    <article class="act-card">
+      <div class="act-header">
+        <div class="meta-chip-row">
+          <span class="chip-loc">Lembaga Penyelenggara PAUD</span>
+        </div>
+        <h3>WORKSHOP DEEP LEARNING DAN CODING PAUD</h3>
+        <p>Pelatihan peningkatan kompetensi pendidik dalam merancang pembelajaran anak usia dini dengan pendekatan deep learning dan pengenalan dasar-dasar logika coding menyenangkan.</p>
+      </div>
+
+      <div class="doc-grid">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-3.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-3.jpg" alt="Sertifikat Workshop Deep Learning dan Coding PAUD (Tampak Depan)" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Sertifikat (Tampak Depan)</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-4.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-4.jpg" alt="Struktur Materi & Jam Pelatihan Workshop Deep Learning" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Struktur Materi & Jam Pelatihan</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Kegiatan 2 -->
+    <article class="act-card">
+      <div class="act-header">
+        <div class="meta-chip-row">
+          <span class="chip-loc">Lembaga Pendidikan Guru</span>
+        </div>
+        <h3>WORKSHOP INSPIRATIVE TEACHER</h3>
+        <p>Workshop penguatan karakter, kreativitas mengajar, dan motivasi pendidik inspiratif guna menghadirkan proses belajar yang berpusat pada kebahagiaan anak usia dini.</p>
+      </div>
+
+      <div class="doc-grid">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-5.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-5.jpg" alt="Sertifikat Workshop Inspirative Teacher (Tampak Depan)" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Sertifikat (Tampak Depan)</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-6.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-6.jpg" alt="Struktur Materi Workshop Inspirative Teacher" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Struktur Materi & Dokumentasi</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Kegiatan 3 -->
+    <article class="act-card">
+      <div class="act-header">
+        <div class="meta-chip-row">
+          <span class="chip-date">10–12 Desember 2024</span>
+          <span class="chip-loc">BBGP Provinsi Jawa Timur</span>
+        </div>
+        <h3>SIMPOSIUM PENGGERAK PENDIDIKAN</h3>
+        <p>Simposium Penggerak Pendidikan 2024 yang diadakan oleh Balai Besar Guru Penggerak (BBGP) Provinsi Jawa Timur. Merupakan ajang apresiasi dan panggung perayaan inovasi pendidikan tingkat provinsi yang berlangsung pada 10–12 Desember 2024. Kegiatan ini menghimpun 76 peserta terbaik—terdiri dari Guru Penggerak, Pengajar Praktik, Fasilitator, Kepala Sekolah, dan Pengawas Sekolah—hasil seleksi ketat dari 38 kabupaten/kota se-Jawa Timur untuk membagikan praktik baik, karya inovatif, serta aksi nyata transformasi pembelajaran.</p>
+      </div>
+
+      <div class="doc-grid">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-7.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-7.jpg" alt="Piagam Simposium Penggerak Pendidikan BBGP Jatim 2024" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Piagam Penghargaan BBGP Jatim</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-8.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-8.jpg" alt="Dokumentasi Panggung Apresiasi Simposium BBGP Jatim" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Foto Dokumentasi di Panggung Simposium</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Kegiatan 4 -->
+    <article class="act-card">
+      <div class="act-header">
+        <div class="meta-chip-row">
+          <span class="chip-loc">Webinar Daring</span>
+        </div>
+        <h3>WEBINARPERLINDUNGAN PROFESI GURU</h3>
+        <p>Peningkatan wawasan hukum dan perlindungan profesi guru dalam menjalankan tugas kependidikan dan layanan pembelajaran yang aman, bermartabat, dan profesional.</p>
+      </div>
+
+      <div class="doc-grid">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-9.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-9.jpg" alt="Sertifikat Webinar Perlindungan Profesi Guru" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Sertifikat (Tampak Depan)</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-10.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-10.jpg" alt="Struktur Materi / Bukti Kehadiran Webinar" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Struktur Materi & Jam Pelatihan</figcaption>
+        </figure>
+      </div>
+    </article>
+  </div>
+</div>

@@ -1,0 +1,133 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --rasp: #B3205F;
+  --rasp-d: #8A154A;
+  --teal: #1E8F8C;
+  --teal-d: #146A68;
+  --sun: #F4B52E;
+  --leaf: #2F7D3B;
+  --ink: #1F2A33;
+  --mute: #5B6872;
+  --line: #D9E6EA;
+  --card: #FFFFFF;
+  --bg-soft: #F6FAFB;
+  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  text-decoration: none; font-weight: 700; font-size: 14px; padding: 10px 20px;
+  border-radius: 999px; background: var(--rasp); color: #fff; border: 2px solid var(--rasp);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-2px); background: var(--rasp-d); border-color: var(--rasp-d); box-shadow: 0 6px 16px rgba(179,32,95,.25); }
+.btn.ghost { background: transparent; color: var(--rasp); border-color: var(--rasp); }
+.btn.ghost:hover { background: #fff; transform: translateY(-2px); }
+.btn.teal { background: var(--teal); border-color: var(--teal); color: #fff; }
+.btn.teal:hover { background: var(--teal-d); border-color: var(--teal-d); }
+.btn.sun { background: var(--sun); border-color: var(--sun); color: #2A1800; }
+.btn.sun:hover { background: #E09E19; }
+.btn.leaf { background: var(--leaf); border-color: var(--leaf); color: #fff; }
+.btn.leaf:hover { background: #23632E; }
+.btn-sm { font-size: 13px; padding: 6px 16px; }
+.foto {
+  background-color: #CFE8EC;
+  background-image: linear-gradient(135deg, #BFE3E6, #F7D6E4);
+  background-size: cover; background-position: center;
+}
+img { max-width: 100%; height: auto; display: block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>
+.sh { margin-bottom: 22px; }
+.sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
+.sub { color: var(--mute); max-width: 65ch; font-size: 14.5px; }
+.notice-box {
+  background: #FFF8E6; border: 1px solid #FFE08A; border-radius: 14px;
+  padding: 14px 18px; margin-bottom: 24px; font-size: 13.5px; color: #7A5500;
+}
+.kombel-card {
+  background: var(--card); border: 2px dashed #B8D4DC; border-radius: 20px;
+  padding: 26px 28px; display: flex; flex-direction: column; gap: 14px;
+  margin-bottom: 20px;
+}
+.kombel-card h3 { font-size: 21px; color: var(--ink); }
+.placeholder-tag {
+  display: inline-block; font-size: 12px; font-weight: 700; color: #7A5500;
+  background: #FFF0C2; border-radius: 999px; padding: 2px 10px;
+}
+.kombel-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 6px; }
+.field-box { background: #F6FAFB; padding: 10px 14px; border-radius: 10px; font-size: 13px; }
+.field-box b { display: block; color: var(--mute); font-size: 11px; text-transform: uppercase; margin-bottom: 2px; }
+</style>
+<div class="wrap">
+  <div class="sh">
+    <p class="eyebrow">Komunitas Belajar Sekolah</p>
+    <h2>Partisipasi Komunitas IntraSekolah</h2>
+    <p class="sub">Rekam jejak pertemuan, refleksi mingguan, dan kolaborasi guru di lingkungan TK PGRI Prunggahan Kulon.</p>
+  </div>
+
+  <div class="notice-box">
+    ℹ️ <b>Catatan Template Siap Isi:</b> Pada situs aslinya, halaman ini belum diisi konten. Berikut adalah kerangka kartu kegiatan resmi yang siap diisi dengan materi komunitas belajar Anda.
+  </div>
+
+  <article class="kombel-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span class="placeholder-tag">[SIAP DIISI - KEGIATAN KOMBEL 1]</span>
+      <span style="font-size:13px;color:var(--mute);font-weight:600;">[ISI TANGGAL PELAKSANAAN]</span>
+    </div>
+    <h3>[ISI JUDUL KEGIATAN KOMBEL INTRASEKOLAH]</h3>
+    <p style="color:#4B5B65;font-size:14.5px;">[Tuliskan uraian kegiatan: topik diskusi, analisis capaian perkembangan anak didik, perancangan modul projek P5 bersama rekan guru di TK PGRI Prunggahan Kulon, dan tindak lanjut perbaikan kelas.]</p>
+    
+    <div class="kombel-fields">
+      <div class="field-box">
+        <b>Tempat Pelaksanaan</b>
+        [ISI: TK PGRI Prunggahan Kulon]
+      </div>
+      <div class="field-box">
+        <b>Peserta / Rekan Terlibat</b>
+        [ISI: Kepala Sekolah & Seluruh Guru Kelompok A & B]
+      </div>
+      <div class="field-box">
+        <b>Hasil / Dampak</b>
+        [ISI: Kesepakatan Asesmen / Modul Ajar Bersama]
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:8px;">
+      <a class="btn btn-sm ghost" href="#" target="_blank" rel="noopener">[Unggah Foto Dokumentasi ↗]</a>
+      <a class="btn btn-sm ghost" href="#" target="_blank" rel="noopener">[Unggah Notula / Berkas ↗]</a>
+    </div>
+  </article>
+
+  <article class="kombel-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span class="placeholder-tag">[SIAP DIISI - KEGIATAN KOMBEL 2]</span>
+      <span style="font-size:13px;color:var(--mute);font-weight:600;">[ISI TANGGAL PELAKSANAAN]</span>
+    </div>
+    <h3>[ISI JUDUL DISKUSI REFLEKSI PEMBELAJARAN]</h3>
+    <p style="color:#4B5B65;font-size:14.5px;">[Tuliskan uraian evaluasi berkala proses pembelajaran, berbagi kendala siswa di kelas masing-masing, serta penyusunan media ajar kolaboratif.]</p>
+    
+    <div class="kombel-fields">
+      <div class="field-box">
+        <b>Tempat Pelaksanaan</b>
+        [ISI: Ruang Guru TK PGRI Prunggahan Kulon]
+      </div>
+      <div class="field-box">
+        <b>Fasilitator / Narasumber</b>
+        [ISI: Ketua Komunitas Belajar Sekolah]
+      </div>
+      <div class="field-box">
+        <b>Dokumen Pendukung</b>
+        [ISI: Rencana Kerja Komunitas Belajar]
+      </div>
+    </div>
+  </article>
+</div>

@@ -1,0 +1,142 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --rasp: #B3205F;
+  --rasp-d: #8A154A;
+  --teal: #1E8F8C;
+  --teal-d: #146A68;
+  --sun: #F4B52E;
+  --leaf: #2F7D3B;
+  --ink: #1F2A33;
+  --mute: #5B6872;
+  --line: #D9E6EA;
+  --card: #FFFFFF;
+  --bg-soft: #F6FAFB;
+  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  text-decoration: none; font-weight: 700; font-size: 14px; padding: 11px 22px;
+  border-radius: 999px; background: var(--rasp); color: #fff; border: 2px solid var(--rasp);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-2px); background: var(--rasp-d); border-color: var(--rasp-d); box-shadow: 0 6px 16px rgba(179,32,95,.25); }
+.btn.ghost { background: transparent; color: var(--rasp); border-color: var(--rasp); }
+.btn.ghost:hover { background: #fff; transform: translateY(-2px); }
+.btn.teal { background: var(--teal); border-color: var(--teal); color: #fff; }
+.btn.teal:hover { background: var(--teal-d); border-color: var(--teal-d); }
+.btn.sun { background: var(--sun); border-color: var(--sun); color: #2A1800; }
+.btn.sun:hover { background: #E09E19; }
+.btn.leaf { background: var(--leaf); border-color: var(--leaf); color: #fff; }
+.btn.leaf:hover { background: #23632E; }
+.foto {
+  background-color: #CFE8EC;
+  background-image: linear-gradient(135deg, #BFE3E6, #F7D6E4);
+  background-size: cover; background-position: center;
+}
+img { max-width: 100%; height: auto; display: block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>
+.sh { margin-bottom: 20px; }
+.sh h2 { font-size: clamp(26px, 3.8vw, 36px); color: var(--ink); margin-top: 4px; }
+.sh .sub { color: var(--mute); font-size: 15px; max-width: 65ch; margin-top: 4px; }
+.grid-menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
+.card-menu {
+  display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 20px;
+  background: var(--card); border: 1px solid var(--line); text-decoration: none; color: var(--ink);
+  box-shadow: 0 4px 16px rgba(21,70,80,.05);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.card-menu:hover, .card-menu:focus-visible {
+  transform: translateY(-4px); box-shadow: 0 14px 30px rgba(21,70,80,.13);
+  border-color: var(--c); outline: none;
+}
+.ic-box {
+  width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center;
+  color: #fff; background: var(--c); margin-bottom: 2px;
+}
+.ic-box svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.card-menu h3 { font-size: 20px; color: var(--ink); }
+.card-menu p { font-size: 13.5px; color: var(--mute); line-height: 1.5; }
+.card-menu .go { margin-top: auto; padding-top: 8px; font-weight: 700; font-size: 13px; color: var(--c); display: inline-flex; align-items: center; gap: 4px; }
+@media (max-width: 600px) {
+  .grid-menu { grid-template-columns: 1fr; }
+}
+</style>
+<div class="wrap">
+  <div class="sh">
+    <p class="eyebrow">Jelajahi Portofolio</p>
+    <h2>Isi Portofolio Guru</h2>
+    <p class="sub">Silakan pilih menu di bawah ini untuk melihat jejak dedikasi, karya inovatif, dan pengembangan profesional.</p>
+  </div>
+  <div class="grid-menu">
+    <a class="card-menu" style="--c:#B3205F" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/profil-guru" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span>
+      <h3>Profil Guru</h3>
+      <p>Identitas lengkap, riwayat pendidikan SD sampai S1, tugas sekolah, dan kontak.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#1E8F8C" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+      <h3>Portofolio Guru</h3>
+      <p>Induk direktori jejak kepemimpinan pembelajaran dan rekam jejak guru PAUD.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#2F7D3B" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru/kegiatan-pengembangan-diri" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><path d="M12 6v14M12 6C10 4.5 7 4 3 4v14c4 0 7 .5 9 2 2-1.5 5-2 9-2V4c-4 0-7 .5-9 2z"/></svg></span>
+      <h3>Pengembangan Diri</h3>
+      <p>14 kegiatan diklat, workshop, PembaTIK, PESILAT, PENDEKAR, dan Guru Penggerak.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#D98E04" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru/pendampingan-rekan-sejawat" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 1.5 6 5.5"/></svg></span>
+      <h3>Pendampingan</h3>
+      <p>8 kegiatan pengimbasan praktik baik, digitalisasi, Sulingjar, dan wawasan kebangsaan.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#6A4FB3" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru/pengalaman-organisasi-profesi" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><path d="M4 21V8l8-5 8 5v13M9 21v-6h6v6M3 21h18"/></svg></span>
+      <h3>Organisasi Profesi</h3>
+      <p>9 kepengurusan organisasi (IGTKI, PGRI, PKG, Gugus PAUD, TPPK) beserta SK resmi.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#E0562E" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru/karya-inovasi" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.8 1 1.5 1 2.5h6c0-1 .2-1.7 1-2.5A6 6 0 0 0 12 3z"/></svg></span>
+      <h3>Karya Inovasi</h3>
+      <p>5 karya inovatif: Pahlawan Cilik, Geraling Mediva, PEMANDU, Gebyar Bunda, Cooking Class.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#C79500" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru/prestasipenghargaan" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H4v1a4 4 0 0 0 4 4M16 6h4v1a4 4 0 0 1-4 4M12 13v4M8 21h8M10 17h4"/></svg></span>
+      <h3>Prestasi & Penghargaan</h3>
+      <p>Juara 2 Guru Prima Kab. Tuban 2024, Juara 1 Cerdas Cermat, Juara 3 Micro Teaching.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#0E7490" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/bukti-implementasi-karya-inovasi" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v4h4M9 14l2 2 4-4"/></svg></span>
+      <h3>Implementasi Karya</h3>
+      <p>Bukti penerapan nyata di kelas, video dokumentasi YouTube, Canva MPI, dan Wordwall.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#2563A8" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru/partisipasi-komunitas-intrasekolah" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v10h14V10M9 20v-6h6v6"/></svg></span>
+      <h3>Komunitas IntraSekolah</h3>
+      <p>Partisipasi dan kegiatan komunitas belajar guru di lingkungan TK PGRI Prunggahan Kulon.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+    <a class="card-menu" style="--c:#A33B8F" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/portofolio-guru/partisipasi-komunitas-antarsekolah" target="_blank" rel="noopener">
+      <span class="ic-box"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M8.7 10.7l6.6-3.4M8.7 13.3l6.6 3.4"/></svg></span>
+      <h3>Komunitas AntarSekolah</h3>
+      <p>Partisipasi kolaborasi belajar bersama rekan pendidik Gugus PAUD dan PKG Semanding.</p>
+      <span class="go">Buka halaman &rarr;</span>
+    </a>
+  </div>
+</div>

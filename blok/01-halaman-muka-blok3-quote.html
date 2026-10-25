@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --rasp: #B3205F;
+  --rasp-d: #8A154A;
+  --teal: #1E8F8C;
+  --teal-d: #146A68;
+  --sun: #F4B52E;
+  --leaf: #2F7D3B;
+  --ink: #1F2A33;
+  --mute: #5B6872;
+  --line: #D9E6EA;
+  --card: #FFFFFF;
+  --bg-soft: #F6FAFB;
+  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  text-decoration: none; font-weight: 700; font-size: 14px; padding: 11px 22px;
+  border-radius: 999px; background: var(--rasp); color: #fff; border: 2px solid var(--rasp);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease; cursor: pointer;
+}
+.btn:hover { transform: translateY(-2px); background: var(--rasp-d); border-color: var(--rasp-d); box-shadow: 0 6px 16px rgba(179,32,95,.25); }
+.btn.ghost { background: transparent; color: var(--rasp); border-color: var(--rasp); }
+.btn.ghost:hover { background: #fff; transform: translateY(-2px); }
+.btn.teal { background: var(--teal); border-color: var(--teal); color: #fff; }
+.btn.teal:hover { background: var(--teal-d); border-color: var(--teal-d); }
+.btn.sun { background: var(--sun); border-color: var(--sun); color: #2A1800; }
+.btn.sun:hover { background: #E09E19; }
+.btn.leaf { background: var(--leaf); border-color: var(--leaf); color: #fff; }
+.btn.leaf:hover { background: #23632E; }
+.foto {
+  background-color: #CFE8EC;
+  background-image: linear-gradient(135deg, #BFE3E6, #F7D6E4);
+  background-size: cover; background-position: center;
+}
+img { max-width: 100%; height: auto; display: block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>
+.quote-card {
+  background: linear-gradient(135deg, #FFF6F9 0%, #FFFFFF 100%);
+  border: 1px solid var(--line); border-left: 6px solid var(--rasp);
+  border-radius: 20px; padding: 28px 32px; box-shadow: 0 6px 20px rgba(179,32,95,.06);
+  display: flex; flex-direction: column; gap: 12px;
+}
+.quote-text {
+  font-family: var(--font-display); font-size: clamp(19px, 2.5vw, 24px);
+  color: var(--rasp-d); line-height: 1.4; font-style: italic;
+}
+.quote-author { font-size: 15px; font-weight: 700; color: var(--ink); }
+.quote-role { font-size: 13px; color: var(--mute); }
+</style>
+<div class="wrap">
+  <div class="quote-card">
+    <p class="eyebrow">Filosofi Langkah & Ikhtiar</p>
+    <p class="quote-text">"Jarak antara mimpi dan kenyataan adalah tindakan. Beranilah melangkah, tekunlah berusaha, dan langitkan doa kepada Tuhan. Sebab ikhtiar dan doa adalah jalan menuju terwujudnya setiap mimpi."</p>
+    <div>
+      <p class="quote-author">Ferry Indra Arsanti, S.Pd</p>
+      <p class="quote-role">Guru TK PGRI Prunggahan Kulon &middot; Guru Penggerak Angkatan 7 Kab. Tuban</p>
+    </div>
+  </div>
+</div>

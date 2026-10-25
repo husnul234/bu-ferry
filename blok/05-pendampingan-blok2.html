@@ -1,0 +1,171 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root {
+  --rasp: #B3205F;
+  --rasp-d: #8A154A;
+  --teal: #1E8F8C;
+  --teal-d: #146A68;
+  --sun: #F4B52E;
+  --leaf: #2F7D3B;
+  --ink: #1F2A33;
+  --mute: #5B6872;
+  --line: #D9E6EA;
+  --card: #FFFFFF;
+  --bg-soft: #F6FAFB;
+  --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
+h1, h2, h3, h4, p { margin: 0; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
+img { max-width: 100%; height: auto; display: block; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<style>
+.sh { margin-bottom: 24px; }
+.sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
+.sub { color: var(--mute); max-width: 65ch; font-size: 14.5px; }
+
+.list-pen { display: flex; flex-direction: column; gap: 26px; }
+.pen-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(21,70,80,.06); padding: 26px 28px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.pen-card:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(21,70,80,.10); }
+
+.meta-chip-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.chip-date {
+  background: var(--rasp); color: #fff; font-weight: 700; font-size: 12px;
+  border-radius: 999px; padding: 3px 12px; font-variant-numeric: tabular-nums;
+}
+.chip-loc {
+  font-size: 12.5px; font-weight: 600; color: var(--teal-d); background: #E6F6F5;
+  border-radius: 999px; padding: 3px 12px;
+}
+.pen-card h3 { font-size: clamp(20px, 2.3vw, 23px); color: var(--rasp-d); line-height: 1.3; }
+.pen-card p { color: #33434D; font-size: 14.5px; line-height: 1.65; }
+
+.doc-media {
+  margin-top: 4px; max-width: 680px;
+}
+.doc-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 4px;
+}
+.doc-item {
+  margin: 0; display: flex; flex-direction: column; gap: 6px;
+}
+.doc-link {
+  position: relative; display: block; border-radius: 14px; overflow: hidden;
+  background: #FFFFFF; border: 1px solid #D9E6EA;
+  box-shadow: 0 4px 12px rgba(21,70,80,.05);
+  text-decoration: none; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.doc-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--teal);
+  box-shadow: 0 8px 20px rgba(30,143,140,.18);
+}
+.doc-link img {
+  width: 100%; height: auto; display: block;
+}
+.zoom-pill {
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(31,42,51,0.78); backdrop-filter: blur(4px);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 5px 12px; border-radius: 999px;
+  opacity: 0; transition: opacity .2s ease; pointer-events: none;
+}
+.doc-link:hover .zoom-pill { opacity: 1; }
+.doc-caption {
+  font-size: 12.5px; font-weight: 600; color: var(--mute);
+  padding-top: 2px;
+}
+
+@media (max-width: 680px) {
+  .doc-grid { grid-template-columns: 1fr; }
+  .pen-card { padding: 20px 16px; }
+}
+</style>
+
+<div class="wrap">
+  <div class="sh">
+    <p class="eyebrow">Portofolio Guru PAUD</p>
+    <h2>Pendampingan Rekan Sejawat</h2>
+    <p class="sub">Bagian 2: Praktik baik pengenalan anak kesulitan belajar, optimalisasi Belajar.id, wawasan kebangsaan, dan budaya positif.</p>
+  </div>
+
+  <div class="list-pen">
+    <!-- Kegiatan 5 -->
+    <article class="pen-card">
+      <div class="meta-chip-row">
+        <span class="chip-date">8 Agustus 2024</span>
+        <span class="chip-loc">TK Tunas Baru Desa Prunggahan Wetan</span>
+      </div>
+      <h3>PENGENALAN ANAK KESULITAN BELAJAR</h3>
+      <p>Kegiatan ini dilaksanakan pada tanggal 8 Agustus 2024 di TK Tunas Baru Desa Prunggahan Wetan kecamatan Semanding kabupaten Tuban sebagai praktik baik dari diklat Pengenalan Anak Kesulitan Belajar yang pernah saya ikuti sebelumnya.</p>
+
+      <div class="doc-media">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/05-pendampingan-rekan-sejawat-img-4.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/05-pendampingan-rekan-sejawat-img-4.jpg" alt="Foto Pendampingan Pengenalan Anak Kesulitan Belajar di TK Tunas Baru" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Foto Sesi Tanya Jawab & Pendampingan Guru di TK Tunas Baru</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Kegiatan 6 -->
+    <article class="pen-card">
+      <div class="meta-chip-row">
+        <span class="chip-date">8 Juli 2024</span>
+        <span class="chip-loc">TK Tunas Agung Desa Tegalagung</span>
+      </div>
+      <h3>OPTIMALISASI BELAJAR ID</h3>
+      <p>Kegiatan ini adalah serangkaian program Advokasi Daerah untuk Pemanfaatan dan Optimalisasi Belajar ID, dilaksanakan pada tanggal 8 Juli 2024 di TK Tunas Agung Desa Tegalagung Kecamatan Semanding Kabupaten Tuban</p>
+    </article>
+
+    <!-- Kegiatan 7 -->
+    <article class="pen-card">
+      <div class="meta-chip-row">
+        <span class="chip-loc">TK PGRI Prunggahan Kulon & Gugus PAUD Adenium</span>
+      </div>
+      <h3>WAWASAN KEBANGSAAN</h3>
+      <p>Kegiatan ini adalah serangkaian dari praktik baik tentang materi dari program PENDEKAR tahap 2 jurus 7: Wawasan Kebangsaan yang dilaksanakan di TK PGRI Prunggahan Kulon dan Gugus PAUD Adenium kecamatan Semanding.</p>
+
+      <div class="doc-grid">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/05-pendampingan-rekan-sejawat-img-5.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/05-pendampingan-rekan-sejawat-img-5.jpg" alt="Dokumentasi Pemaparan Materi Wawasan Kebangsaan" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Pemaparan Materi Wawasan Kebangsaan Gugus Adenium</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/05-pendampingan-rekan-sejawat-img-6.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/05-pendampingan-rekan-sejawat-img-6.jpg" alt="Foto Bersama Rekan Guru Peserta Pengimbasan Wawasan Kebangsaan" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Foto Bersama Rekan Pendidik Gugus PAUD Adenium</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Kegiatan 8 -->
+    <article class="pen-card">
+      <div class="meta-chip-row">
+        <span class="chip-date">21 Februari 2023</span>
+        <span class="chip-loc">PBG (Pusat Belajar Guru) Tuban</span>
+      </div>
+      <h3>PENERAPAN BUDAYA POSITIF DAN KEYAKINAN KELAS</h3>
+      <p>Kegiatan ini adalah serangkaian praktik baik penerapan Budaya Positif dan Keyakinan kelas yang masuk ke dalam serangkaian program Guru Penggerak dan dilaksanakan pada tanggal 21 Februari 2023 di PBG (Pusat Belajar Guru) Tuban.</p>
+    </article>
+  </div>
+</div>

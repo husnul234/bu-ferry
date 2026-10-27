@@ -59,36 +59,38 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 12.5px; font-weight: 600; color: var(--teal-d); background: #E6F6F5;
   border-radius: 999px; padding: 3px 12px;
 }
-.act-header h3 { font-size: clamp(20px, 2.4vw, 24px); color: var(--rasp-d); line-height: 1.25; margin: 0; }
-.act-header p { color: #33434D; font-size: 14.5px; line-height: 1.65; margin: 0; }
+.chip-prov {
+  font-size: 12px; font-weight: 700; color: #fff; background: var(--teal);
+  border-radius: 999px; padding: 3px 12px; text-transform: uppercase;
+}
+.act-header h3 { font-size: clamp(20px, 2.3vw, 24px); color: var(--ink); line-height: 1.3; }
+.act-header p { color: #4B5B65; font-size: 14.5px; line-height: 1.65; }
 
 .doc-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 4px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px; margin-top: 4px;
 }
 .doc-item {
   margin: 0; display: flex; flex-direction: column; gap: 8px;
 }
 .doc-link {
-  position: relative; display: block; border-radius: 12px; overflow: hidden;
+  position: relative; display: block; border-radius: 14px; overflow: hidden;
   background: #FFFFFF; border: 1px solid #D9E6EA;
-  box-shadow: 0 4px 12px rgba(21,70,80,.05);
+  box-shadow: 0 4px 14px rgba(21,70,80,.05);
   text-decoration: none; cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 .doc-link:hover {
   transform: translateY(-2px);
   border-color: var(--teal);
-  box-shadow: 0 8px 20px rgba(30,143,140,.18);
+  box-shadow: 0 10px 24px rgba(30,143,140,.20);
 }
 .doc-link img {
   width: 100%; height: auto; display: block;
   background: #F4F8FA;
 }
 .zoom-pill {
-  position: absolute; bottom: 10px; right: 10px;
+  position: absolute; bottom: 12px; right: 12px;
   background: rgba(31,42,51,0.78); backdrop-filter: blur(4px);
   color: #fff; font-size: 11px; font-weight: 700;
   padding: 5px 12px; border-radius: 999px;
@@ -96,13 +98,13 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .doc-link:hover .zoom-pill { opacity: 1; }
 .doc-caption {
-  font-size: 12.5px; font-weight: 600; color: var(--mute);
-  text-align: center; margin: 0;
+  font-size: 13px; font-weight: 600; color: var(--mute);
+  text-align: center;
 }
 
 @media (max-width: 680px) {
-  .doc-grid { grid-template-columns: 1fr; }
   .act-card { padding: 20px 16px; }
+  .doc-grid { grid-template-columns: 1fr; }
 }
 </style>
 
@@ -110,10 +112,40 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="sh">
     <p class="eyebrow">Portofolio Guru PAUD</p>
     <h2>Kegiatan Pengembangan Diri</h2>
-    <p class="sub">Bagian 1: Pelatihan, workshop inovasi deep learning, inspiratif, dan simposium tingkat provinsi.</p>
+    <p class="sub">Bagian 1: Pelatihan, workshop inovasi pembelajaran mendalam (deep learning), sosialisasi LKBH, guru inspiratif, dan simposium tingkat provinsi.</p>
   </div>
 
   <div class="list-act">
+    <!-- Kegiatan Baru (Provinsi Jatim 2026) -->
+    <article class="act-card">
+      <div class="act-header">
+        <div class="meta-chip-row">
+          <span class="chip-prov">Tingkat Provinsi Jatim &middot; 32 JP</span>
+          <span class="chip-date">02–15 Mei 2026</span>
+          <span class="chip-loc">GOR Astabrata UNIPA PGRI Surabaya</span>
+        </div>
+        <h3>WORKSHOP PEMBELAJARAN MENDALAM, SOSIALISASI LKBH DAN MATERI PORSENI</h3>
+        <p>Pelatihan peningkatan kompetensi pendidik berskala provinsi yang diselenggarakan oleh Pengurus Provinsi IGTKI-PGRI Jawa Timur bekerja sama dengan Dinas Pendidikan Provinsi Jawa Timur (Pola 32 JP). Memuat materi transformasi pendidikan, implementasi konsep pembelajaran mendalam (*deep learning*), perancangan media pembelajaran, sosialisasi LKBH, simulasi refleksi, hingga teknik bercerita dengan alat peraga.</p>
+      </div>
+
+      <div class="doc-grid">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-39.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-39.jpg" alt="Sertifikat Workshop Pembelajaran Mendalam IGTKI PGRI Provinsi Jawa Timur (Tampak Depan)" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Sertifikat Resmi IGTKI Jatim (Tampak Depan)</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-40.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-40.jpg" alt="Struktur Materi 32 JP Workshop Pembelajaran Mendalam" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Struktur Materi & Jam Pelatihan (32 JP)</figcaption>
+        </figure>
+      </div>
+    </article>
+
     <!-- Kegiatan 1 -->
     <article class="act-card">
       <div class="act-header">
@@ -205,7 +237,7 @@ img { max-width: 100%; height: auto; display: block; }
         <div class="meta-chip-row">
           <span class="chip-loc">Webinar Daring</span>
         </div>
-        <h3>WEBINARPERLINDUNGAN PROFESI GURU</h3>
+        <h3>WEBINAR PERLINDUNGAN PROFESI GURU</h3>
         <p>Peningkatan wawasan hukum dan perlindungan profesi guru dalam menjalankan tugas kependidikan dan layanan pembelajaran yang aman, bermartabat, dan profesional.</p>
       </div>
 

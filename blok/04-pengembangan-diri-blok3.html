@@ -38,7 +38,7 @@ img { max-width: 100%; height: auto; display: block; }
 <style>
 .sh { margin-bottom: 24px; }
 .sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
-.sub { color: var(--mute); max-width: 65ch; font-size: 14.5px; }
+.sub { color: var(--mute); max-width: 70ch; font-size: 14.5px; }
 
 .list-act { display: flex; flex-direction: column; gap: 32px; }
 .act-card {
@@ -51,6 +51,10 @@ img { max-width: 100%; height: auto; display: block; }
 
 .act-header { display: flex; flex-direction: column; gap: 8px; }
 .meta-chip-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.chip-prov {
+  background: #FFF3E6; color: #B25E00; font-weight: 700; font-size: 12px;
+  border-radius: 999px; padding: 3px 12px; border: 1px solid #FFD8A8;
+}
 .chip-date {
   background: var(--rasp); color: #fff; font-weight: 700; font-size: 12px;
   border-radius: 999px; padding: 3px 12px; font-variant-numeric: tabular-nums;
@@ -67,6 +71,9 @@ img { max-width: 100%; height: auto; display: block; }
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   margin-top: 4px;
+}
+.doc-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 .doc-item {
   margin: 0; display: flex; flex-direction: column; gap: 8px;
@@ -100,8 +107,11 @@ img { max-width: 100%; height: auto; display: block; }
   text-align: center; margin: 0;
 }
 
+@media (max-width: 820px) {
+  .doc-grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 680px) {
-  .doc-grid { grid-template-columns: 1fr; }
+  .doc-grid, .doc-grid-3 { grid-template-columns: 1fr; }
   .act-card { padding: 20px 16px; }
 }
 </style>
@@ -110,16 +120,47 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="sh">
     <p class="eyebrow">Portofolio Guru PAUD</p>
     <h2>Kegiatan Pengembangan Diri</h2>
-    <p class="sub">Bagian 3: Program PENDEKAR wawasan kebangsaan, penjaminan 8 standar nasional, Guru Penggerak Angkatan 7, P5, dan PembaTIK 2023.</p>
+    <p class="sub">Bagian 3: Program PESILAT, PENDEKAR BBGP Jatim wawasan kebangsaan, penjaminan 8 standar nasional, Guru Penggerak Angkatan 7, P5, dan PembaTIK 2023.</p>
   </div>
 
   <div class="list-act">
-    <!-- Kegiatan 10 -->
+    <!-- Kegiatan 10: PESILAT BBGP Jatim -->
     <article class="act-card">
       <div class="act-header">
         <div class="meta-chip-row">
+          <span class="chip-prov">BBGP Jawa Timur &middot; 42 JP</span>
+          <span class="chip-date">22 Juli – 18 Agustus 2024</span>
+          <span class="chip-loc">Daring & Luring BBGP Jatim</span>
+        </div>
+        <h3>PESILAT (PENGGERAK LITERASI, LEADERSHIP, APLIKASI, DAN TEKNOLOGI)</h3>
+        <p>Program PESILAT (Penggerak Literasi, Leadership, Aplikasi, dan Teknologi) BBGP Jawa Timur adalah inisiatif yang bertujuan untuk meningkatkan kualitas pendidikan di sekolah-sekolah melalui penguatan literasi dan pemanfaatan teknologi. Program ini dirancang untuk memberdayakan guru dan kepala sekolah agar dapat menciptakan lingkungan belajar yang inspiratif, inovatif, dan berpusat pada siswa. Pada program kegiatan ini saya adalah peserta kelas C yaitu jurus Pemanfaatan Media Video untuk Pembelajaran, di kesempatan ini teman satu kelas mayoritas sesama guru TK hanya satu orang saja yang dari jenjang SD. PESILAT dilaksanakan di BBGP Jatim pada tanggal 22 Juli sampai 18 Agustus 2024 secara luring dan daring.</p>
+      </div>
+
+      <div class="doc-grid">
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-23.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-23.jpg" alt="Sertifikat Program PESILAT BBGP Jatim" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Sertifikat Kelulusan Program PESILAT (Tampak Depan)</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-24.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-24.jpg" alt="Struktur Materi 42 JP Program PESILAT" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Struktur Materi & Alokasi Jam (42 JP)</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Kegiatan 11: PENDEKAR BBGP Jatim -->
+    <article class="act-card">
+      <div class="act-header">
+        <div class="meta-chip-row">
+          <span class="chip-prov">BBGP Jawa Timur &middot; 52 JP</span>
           <span class="chip-date">12 Maret – 19 April 2024</span>
-          <span class="chip-loc">BBGP Kota Batu</span>
+          <span class="chip-loc">BBGP Kota Batu (Daring & Luring)</span>
         </div>
         <h3>PENDEKAR (PENGGERAK MERDEKA BELAJAR)</h3>
         <p>Program PENDEKAR (Penggerak Merdeka Belajar) BBGP (Balai Besar Guru Penggerak) Jawa Timur adalah program yang diinisiasi untuk mendukung konsep Merdeka Belajar yang dicanangkan oleh Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi Republik Indonesia. Program ini bertujuan untuk memberdayakan guru-guru di Jawa Timur agar dapat mengimplementasikan prinsip-prinsip Merdeka Belajar dalam proses pembelajaran. Pada kesempatan ini saya terjaring pada tahap 2 dan masuk pada Jurus 7 yaitu Penguatan Wawasan Kebangsaan. PENDEKAR dilaksanakan di BBGP Provinsi Jawa Timur, Kota Batu secara luring dan daring pada tanggal 12 Maret sd 19 April 2024. Satu kelas berisi 41 guru penggerak dari kabupeten/kota di Jawa Timur mulai jenjang TK hingga SMA/Sederajat.</p>
@@ -127,58 +168,60 @@ img { max-width: 100%; height: auto; display: block; }
 
       <div class="doc-grid">
         <figure class="doc-item">
-          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-23.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-23.jpg" alt="Sertifikat Program PENDEKAR BBGP Jatim" loading="lazy">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-25.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-25.jpg" alt="Sertifikat Program PENDEKAR BBGP Jatim" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Sertifikat Kelulusan PENDEKAR</figcaption>
+          <figcaption class="doc-caption">Sertifikat Kelulusan PENDEKAR Wawasan Kebangsaan</figcaption>
         </figure>
         <figure class="doc-item">
-          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-24.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-24.jpg" alt="Dokumentasi Kelas PENDEKAR Wawasan Kebangsaan" loading="lazy">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-26.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-26.jpg" alt="Struktur Materi 52 JP Program PENDEKAR" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Foto Bersama Rekan Guru Penggerak Se-Jatim</figcaption>
+          <figcaption class="doc-caption">Struktur Materi & Alokasi Jam (52 JP)</figcaption>
         </figure>
       </div>
     </article>
 
-    <!-- Kegiatan 11 -->
+    <!-- Kegiatan 12: Workshop 8 Standar Nasional Pendidikan -->
     <article class="act-card">
       <div class="act-header">
         <div class="meta-chip-row">
+          <span class="chip-prov">Pengawas TK &middot; 32 JP</span>
           <span class="chip-loc">Pengawas TK Semanding</span>
         </div>
         <h3>WORKSHOP PENGUATAN 8 STANDART NASIONAL PENDIDIKAN</h3>
-        <p>Penguatan kapasitas tata kelola dan penjaminan mutu satuan pendidikan anak usia dini sesuai dengan 8 Standar Nasional Pendidikan (SNP).</p>
+        <p>Penguatan kapasitas tata kelola dan penjaminan mutu satuan pendidikan anak usia dini sesuai dengan 8 Standar Nasional Pendidikan (SNP) guna mewujudkan layanan PAUD yang terakreditasi dan berkualitas prima.</p>
       </div>
 
       <div class="doc-grid">
         <figure class="doc-item">
-          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-25.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-25.jpg" alt="Sertifikat Workshop 8 Standar Nasional (Tampak Depan)" loading="lazy">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-27.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-27.jpg" alt="Sertifikat Workshop 8 Standar Nasional (Tampak Depan)" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
           <figcaption class="doc-caption">Sertifikat (Tampak Depan)</figcaption>
         </figure>
         <figure class="doc-item">
-          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-26.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-26.jpg" alt="Struktur Materi & Jam Pelatihan 8 Standar Nasional" loading="lazy">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-28.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-28.jpg" alt="Struktur Materi & Jam Pelatihan 8 Standar Nasional" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Struktur Materi & Dokumentasi</figcaption>
+          <figcaption class="doc-caption">Struktur Materi & Jam Pelatihan (32 JP)</figcaption>
         </figure>
       </div>
     </article>
 
-    <!-- Kegiatan 12 -->
+    <!-- Kegiatan 13: Pendidikan Guru Penggerak -->
     <article class="act-card" style="border-left: 6px solid var(--rasp);">
       <div class="act-header">
         <div class="meta-chip-row">
+          <span class="chip-prov">Kemendikbudristek &middot; 310 JP</span>
           <span class="chip-date">20 Oktober 2022 – 15 Juli 2023</span>
-          <span class="chip-loc">Kemendikbudristek RI</span>
+          <span class="chip-loc">Angkatan 7 (Kelas 139A)</span>
         </div>
-        <h3>GURU PENGGERAK</h3>
+        <h3>PENDIDIKAN GURU PENGGERAK</h3>
         <p><b>Pendidikan Guru Penggerak (Angkatan 7 - Kelas 139A) Periode: 20 Oktober 2022 – 15 Juli 2023 (Daring & Luring)</b></p>
         <p>Sebagai wujud komitmen dalam mengembangkan kompetensi sebagai pemimpin pembelajaran, saya berkesempatan mengikuti Program Pendidikan Guru Penggerak yang diselenggarakan oleh Kemendikbudristek RI. Program ini dirancang untuk mencetak pendidik yang mampu menjadi agen perubahan menuju pembelajaran yang inklusif, inovatif, dan berpihak pada murid.</p>
         <p>Dalam proses belajar ini, saya mendalami berbagai ilmu dan pengalaman berharga di bawah bimbingan:<br>
@@ -190,103 +233,110 @@ img { max-width: 100%; height: auto; display: block; }
 
       <div class="doc-grid">
         <figure class="doc-item">
-          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-27.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-27.jpg" alt="Sertifikat Resmi Guru Penggerak Kemendikbudristek" loading="lazy">
-            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
-          </a>
-          <figcaption class="doc-caption">Sertifikat Kelulusan Guru Penggerak</figcaption>
-        </figure>
-        <figure class="doc-item">
-          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-28.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-28.jpg" alt="Dokumentasi Panen Hasil Belajar Lokakarya 7" loading="lazy">
-            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
-          </a>
-          <figcaption class="doc-caption">Dokumentasi Panen Karya Lokakarya 7</figcaption>
-        </figure>
-      </div>
-    </article>
-
-    <!-- Kegiatan 13 -->
-    <article class="act-card">
-      <div class="act-header">
-        <div class="meta-chip-row">
-          <span class="chip-loc">Gugus PAUD Adenium</span>
-        </div>
-        <h3>WORKSHOP P5</h3>
-        <p>Pelatihan perancangan modul dan pelaksanaan Projek Penguatan Profil Pelajar Pancasila (P5) pada Kurikulum Merdeka di lingkungan anak usia dini.</p>
-      </div>
-
-      <div class="doc-grid">
-        <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-29.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-29.jpg" alt="Sertifikat Workshop P5 (Tampak Depan)" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-29.jpg" alt="Sertifikat Resmi Guru Penggerak Kemendikbudristek" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Sertifikat (Tampak Depan)</figcaption>
+          <figcaption class="doc-caption">Sertifikat Kelulusan (STTPL Guru Penggerak)</figcaption>
         </figure>
         <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-30.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-30.jpg" alt="Struktur Materi & Pelaksanaan Workshop P5" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-30.jpg" alt="Struktur Program Pendidikan Guru Penggerak 310 Jam" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Struktur Materi & Jam Pelatihan</figcaption>
+          <figcaption class="doc-caption">Struktur Program Pendidikan (310 JP)</figcaption>
         </figure>
       </div>
     </article>
 
-    <!-- Kegiatan 14 -->
+    <!-- Kegiatan 14: Workshop P5 -->
     <article class="act-card">
       <div class="act-header">
         <div class="meta-chip-row">
-          <span class="chip-date">Tahun 2023</span>
-          <span class="chip-loc">Kemendikbudristek RI / BLPT</span>
+          <span class="chip-prov">Gugus PAUD &middot; 32 JP</span>
+          <span class="chip-loc">Gugus PAUD Adenium</span>
         </div>
-        <h3>PembaTIK (Pembelajaran Berbasis TIK) Tahun 2023</h3>
-        <p>Peningkatan literasi dan implementasi digital melalui penugasan karya media ajar interaktif PembaTIK Level 1 (Literasi TIK) dan Level 2 (Implementasi TIK) secara berkesinambungan.</p>
+        <h3>WORKSHOP P5 (PROJEK PENGUATAN PROFIL PELAJAR PANCASILA)</h3>
+        <p>Pelatihan perancangan modul dan pelaksanaan Projek Penguatan Profil Pelajar Pancasila (P5) pada Kurikulum Merdeka di lingkungan anak usia dini untuk menumbuhkan karakter profil pelajar Pancasila sedini mungkin.</p>
       </div>
 
       <div class="doc-grid">
         <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-31.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-31.jpg" alt="Sertifikat PembaTIK Level 1" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-31.jpg" alt="Sertifikat Workshop P5 (Tampak Depan)" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Sertifikat PembaTIK Level 1 (Literasi TIK)</figcaption>
+          <figcaption class="doc-caption">Sertifikat Workshop P5 (Tampak Depan)</figcaption>
         </figure>
         <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-32.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-32.jpg" alt="Sertifikat PembaTIK Level 2" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-32.jpg" alt="Struktur Materi & Pelaksanaan Workshop P5" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Sertifikat PembaTIK Level 2 (Implementasi TIK)</figcaption>
+          <figcaption class="doc-caption">Struktur Materi & Jam Pelatihan (32 JP)</figcaption>
         </figure>
+      </div>
+    </article>
+
+    <!-- Kegiatan 15: PembaTIK 2023 -->
+    <article class="act-card">
+      <div class="act-header">
+        <div class="meta-chip-row">
+          <span class="chip-prov">Tingkat Nasional &middot; BLPT Kemendikbudristek</span>
+          <span class="chip-date">Tahun 2023</span>
+          <span class="chip-loc">Daring Berskala Nasional</span>
+        </div>
+        <h3>PEMBELAJARAN BERBASIS TIK (PembaTIK) TAHUN 2023</h3>
+        <p>Peningkatan kompetensi digital pendidik secara berkesinambungan melalui program PembaTIK 2023 yang diselenggarakan oleh Balai Layanan Platform Teknologi (BLPT) Kemendikbudristek RI. Berhasil menuntaskan seluruh penugasan hingga 3 jenjang level: <b>Level 1 (Literasi TIK &ndash; 32 JP)</b>, <b>Level 2 (Implementasi TIK &ndash; 32 JP)</b>, dan <b>Level 3 (Kreasi Media Pembelajaran Berbasis TIK &ndash; 32 JP)</b>.</p>
+      </div>
+
+      <div class="doc-grid doc-grid-3">
+        <!-- Level 1 -->
         <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-33.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-33.jpg" alt="Struktur Materi Level 1" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-33.jpg" alt="Sertifikat PembaTIK 2023 Level 1 Literasi" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Struktur Materi PembaTIK Level 1</figcaption>
+          <figcaption class="doc-caption">Sertifikat Level 1: Literasi (Depan)</figcaption>
         </figure>
         <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-34.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-34.jpg" alt="Struktur Materi Level 2" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-34.jpg" alt="Struktur Materi 32 JP PembaTIK 2023 Level 1 Literasi" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Struktur Materi PembaTIK Level 2</figcaption>
+          <figcaption class="doc-caption">Struktur Materi Level 1 (32 JP)</figcaption>
         </figure>
+
+        <!-- Level 2 -->
         <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-35.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-35.jpg" alt="Bukti Karya Digital PembaTIK" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-35.jpg" alt="Sertifikat PembaTIK 2023 Level 2 Implementasi" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Bukti Pembuatan Media Pembelajaran Digital</figcaption>
+          <figcaption class="doc-caption">Sertifikat Level 2: Implementasi (Depan)</figcaption>
         </figure>
         <figure class="doc-item">
           <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-36.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
-            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-36.jpg" alt="Dokumentasi Berbagi Praktik Baik PembaTIK" loading="lazy">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-36.jpg" alt="Struktur Materi 32 JP PembaTIK 2023 Level 2 Implementasi" loading="lazy">
             <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
           </a>
-          <figcaption class="doc-caption">Dokumentasi Pengimbasan Bersama Rekan Sejawat</figcaption>
+          <figcaption class="doc-caption">Struktur Materi Level 2 (32 JP)</figcaption>
+        </figure>
+
+        <!-- Level 3 -->
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-37.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-37.jpg" alt="Sertifikat PembaTIK 2023 Level 3 Kreasi" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Sertifikat Level 3: Kreasi (Depan)</figcaption>
+        </figure>
+        <figure class="doc-item">
+          <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-38.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+            <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/04-kegiatan-pengembangan-diri-img-38.jpg" alt="Struktur Materi 32 JP PembaTIK 2023 Level 3 Kreasi" loading="lazy">
+            <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+          </a>
+          <figcaption class="doc-caption">Struktur Materi Level 3 (32 JP)</figcaption>
         </figure>
       </div>
     </article>

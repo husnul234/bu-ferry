@@ -32,16 +32,11 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
 .btn.ghost:hover { background: #fff; transform: translateY(-2px); }
 .btn.teal { background: var(--teal); border-color: var(--teal); color: #fff; }
 .btn.teal:hover { background: var(--teal-d); border-color: var(--teal-d); }
-.btn.sun { background: var(--sun); border-color: var(--sun); color: #2A1800; }
-.btn.sun:hover { background: #E09E19; }
+.btn.sun { background: #D97706; border-color: #D97706; color: #fff; }
+.btn.sun:hover { background: #B45309; border-color: #B45309; }
 .btn.leaf { background: var(--leaf); border-color: var(--leaf); color: #fff; }
 .btn.leaf:hover { background: #23632E; }
 .btn-sm { font-size: 13px; padding: 6px 16px; }
-.foto {
-  background-color: #CFE8EC;
-  background-image: linear-gradient(135deg, #BFE3E6, #F7D6E4);
-  background-size: cover; background-position: center;
-}
 img { max-width: 100%; height: auto; display: block; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
@@ -54,14 +49,7 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--card); border: 1px solid var(--line); border-radius: 22px;
   overflow: hidden; box-shadow: 0 8px 26px rgba(21,70,80,.07); margin-bottom: 30px;
 }
-.karya-hero {
-  display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  background: #FCE9F1;
-}
-.karya-cover { min-height: 280px; background-size: cover; background-position: center; }
-.karya-intro { padding: 32px; display: flex; flex-direction: column; gap: 12px; justify-content: center; }
-.karya-tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--rasp); }
-.karya-big { font-family: var(--font-display); font-size: clamp(22px, 2.7vw, 29px); color: var(--rasp-d); line-height: 1.3; }
+.karya-tag { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
 .karya-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
 .three-cols {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -73,27 +61,44 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .col-card h4 { font-size: 19px; color: var(--c); }
 .col-card p { color: #33434D; font-size: 14px; line-height: 1.6; }
-.missions-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px;
-  padding: 0 24px 20px;
+
+.doc-media {
+  padding: 0 24px 8px; max-width: 760px;
 }
-.mission-card {
-  background: #FFFFFF; border: 1px solid var(--line); border-left: 4px solid var(--teal);
-  border-radius: 12px; padding: 14px 16px;
+.doc-item {
+  margin: 0; display: flex; flex-direction: column; gap: 6px;
 }
-.mission-card h5 { font-family: var(--font-display); font-size: 16px; color: var(--teal-d); margin-bottom: 4px; }
-.mission-card p { font-size: 13px; color: var(--mute); line-height: 1.5; }
-.quote-banner {
-  margin: 0 24px 24px; padding: 16px 20px; background: #FFF6F9; border-radius: 14px;
-  border-left: 4px solid var(--rasp); font-family: var(--font-display); font-size: 17px;
-  color: var(--rasp-d); font-style: italic;
+.doc-link {
+  position: relative; display: block; border-radius: 14px; overflow: hidden;
+  background: #FFFFFF; border: 1px solid #D9E6EA;
+  box-shadow: 0 4px 12px rgba(21,70,80,.05);
+  text-decoration: none; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
+.doc-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--teal);
+  box-shadow: 0 8px 20px rgba(30,143,140,.18);
+}
+.doc-link img {
+  width: 100%; height: auto; display: block;
+}
+.zoom-pill {
+  position: absolute; bottom: 10px; right: 10px;
+  background: rgba(31,42,51,0.78); backdrop-filter: blur(4px);
+  color: #fff; font-size: 11px; font-weight: 700;
+  padding: 5px 12px; border-radius: 999px;
+  opacity: 0; transition: opacity .2s ease; pointer-events: none;
+}
+.doc-link:hover .zoom-pill { opacity: 1; }
+.doc-caption {
+  font-size: 12.5px; font-weight: 600; color: var(--mute);
+  padding-top: 2px;
+}
+
 @media (max-width: 760px) {
-  .karya-hero { grid-template-columns: 1fr; }
-  .karya-cover { min-height: 200px; }
-  .karya-intro { padding: 20px; }
   .three-cols { padding: 16px; }
-  .missions-grid { padding: 0 16px 16px; }
+  .doc-media { padding: 0 16px 8px; }
 }
 </style>
 <div class="wrap">
@@ -119,7 +124,7 @@ img { max-width: 100%; height: auto; display: block; }
       </div>
       <div class="col-card" style="--c:#1E8F8C">
         <h4>Inovasi Bahan Alam</h4>
-        <p>Kegiatan bermain tidak membutuhkan biaya yang mahal, bahan yang digunakan bis akita dapatkan dengan mudah di lingkungan sekitar. Contoh bermain Jinas membutuhkan batu kerikil, Serokan menggunakan daun dan biji-bijian, serta mahkota daun nangka.</p>
+        <p>Kegiatan bermain tidak membutuhkan biaya yang mahal, bahan yang digunakan bisa kita dapatkan dengan mudah di lingkungan sekitar. Contoh bermain Jinas membutuhkan batu kerikil, Serokan menggunakan daun dan biji-bijian, serta mahkota daun nangka.</p>
       </div>
       <div class="col-card" style="--c:#B3205F">
         <h4>Dampak & Karakter</h4>
@@ -131,20 +136,32 @@ img { max-width: 100%; height: auto; display: block; }
   <!-- Karya 4: Gebyar Bunda -->
   <article class="karya-box">
     <div style="padding:28px 28px 12px;">
-      <span class="karya-tag" style="color:var(--sun);">Kewirausahaan Sejak Dini</span>
-      <h3 style="font-size:25px;color:#B87700;margin-top:4px;">GEBYAR BUNDA (BUSINESS DAY) INTERPRENEUR CILIK</h3>
+      <span class="karya-tag" style="color:#D97706;">Kewirausahaan Sejak Dini</span>
+      <h3 style="font-size:25px;color:#B45309;margin-top:4px;">GEBYAR BUNDA (BUSINESS DAY) INTERPRENEUR CILIK</h3>
       <div class="karya-cta" style="margin-top:10px;">
         <a class="btn sun btn-sm" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/bukti-implementasi-karya-inovasi" target="_blank" rel="noopener">Lihat Bukti Implementasi &rarr;</a>
       </div>
     </div>
+
+    <!-- Dokumentasi Foto Nyata Gebyar Bunda -->
+    <div class="doc-media">
+      <figure class="doc-item">
+        <a class="doc-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/07-karya-inovasi-img-3.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/07-karya-inovasi-img-3.jpg" alt="Dokumentasi Praktik Gebyar Bunda Business Day Interpreneur Cilik" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <figcaption class="doc-caption">Foto Dokumentasi Kegiatan Gebyar Bunda (Business Day): Murid-murid PAUD bersama Pendidik mempraktikkan proses jual beli kuliner mandiri</figcaption>
+      </figure>
+    </div>
+
     <div class="three-cols">
-      <div class="col-card" style="--c:#F4B52E">
+      <div class="col-card" style="--c:#D97706">
         <h4>Latar Belakang</h4>
-        <p>Latar belakang program Gebyar Bunda (Business Day adalah inovasi pembelajaran dimana kegiatan ini dimaksudkan untuk mengenalkan dan meningkatkan pemanfaatan asset sekitar sekolah untuk belajar.</p>
+        <p>Latar belakang program Gebyar Bunda (Business Day) adalah inovasi pembelajaran dimana kegiatan ini dimaksudkan untuk mengenalkan dan meningkatkan pemanfaatan aset sekitar sekolah untuk belajar.</p>
       </div>
       <div class="col-card" style="--c:#1E8F8C">
         <h4>Inovasi Praktik Langsung</h4>
-        <p>Mengenalkan anak tentang proses jual beli secara bergantian sebagai penjual dan pembeli. Didahului praktik membuat produk olahan mandiri: mengiris pisang goreng dan menakar bahan jus jambu bersama guru dan orang tua.</p>
+        <p>Mengenalkan anak tentang proses jual beli secara bergantian sebagai penjual dan pembeli. Didahului praktik membuat produk olahan mandiri: mengiris pisang goreng dan menakar bahan jus bersama guru dan orang tua.</p>
       </div>
       <div class="col-card" style="--c:#B3205F">
         <h4>Dampak & Keterampilan</h4>
@@ -157,7 +174,7 @@ img { max-width: 100%; height: auto; display: block; }
   <article class="karya-box">
     <div style="padding:28px 28px 12px;">
       <span class="karya-tag" style="color:var(--teal-d);">Kontekstual Lingkungan Sekitar</span>
-      <h3 style="font-size:25px;color:var(--teal-d);margin-top:4px;">COOCKING CLASS "TAHU CRISPY"</h3>
+      <h3 style="font-size:25px;color:var(--teal-d);margin-top:4px;">COOKING CLASS "TAHU CRISPY"</h3>
       <div class="karya-cta" style="margin-top:10px;">
         <a class="btn teal btn-sm" href="https://sites.google.com/guru.paud.belajar.id/ferryindraarsanti/bukti-implementasi-karya-inovasi" target="_blank" rel="noopener">Lihat Bukti Implementasi &rarr;</a>
       </div>
@@ -165,7 +182,7 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="three-cols">
       <div class="col-card" style="--c:#1E8F8C">
         <h4>Latar Belakang</h4>
-        <p>Latar belakang program Coocking Class "Tahu Crispy" adalah anak belajar dari apa yang ada di lingkungan sekitar mereka, memanfaatkan potensi keberadaan pabrik tahu dekat sekolah.</p>
+        <p>Latar belakang program Cooking Class "Tahu Crispy" adalah anak belajar dari apa yang ada di lingkungan sekitar mereka, memanfaatkan potensi keberadaan sentra industri tahu dekat sekolah.</p>
       </div>
       <div class="col-card" style="--c:#2F7D3B">
         <h4>Inovasi Kunjungan Nyata</h4>

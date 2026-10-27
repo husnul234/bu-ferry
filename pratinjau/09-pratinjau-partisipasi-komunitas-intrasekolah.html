@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -25,7 +25,7 @@
 </head>
 <body>
   <div class="preview-header">
-    <span><b>PRATINJAU DESAIN BARU:</b> 09 Partisipasi Komunitas IntraSekolah - Pratinjau Desain Baru</span>
+    <span><b>PRATINJAU DESAIN BARU:</b> 09 Partisipasi Komunitas IntraSekolah</span>
     <span style="color:#D5E3E8;font-size:12px;">Portofolio Guru Bu Ferry Indra Arsanti &middot; Google Sites</span>
   </div>
   <div class="page-stack">
@@ -52,118 +52,353 @@
 * { box-sizing: border-box; }
 body { margin: 0; font-family: var(--font-body); color: var(--ink); line-height: 1.6; background: transparent; }
 h1, h2, h3, h4, p { margin: 0; }
-h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.2; }
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.25; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 20px 16px; }
 .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-d); margin-bottom: 6px; }
-.btn {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  text-decoration: none; font-weight: 700; font-size: 14px; padding: 10px 20px;
-  border-radius: 999px; background: var(--rasp); color: #fff; border: 2px solid var(--rasp);
-  transition: transform .2s ease, background .2s ease, box-shadow .2s ease; cursor: pointer;
+
+.sh { margin-bottom: 26px; }
+.sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
+.sh .sub { color: var(--mute); max-width: 70ch; font-size: 14.5px; }
+
+.badge-count {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: #E8F5F5; color: var(--teal-d); font-size: 12.5px; font-weight: 700;
+  padding: 4px 14px; border-radius: 999px; margin-top: 10px;
 }
-.btn:hover { transform: translateY(-2px); background: var(--rasp-d); border-color: var(--rasp-d); box-shadow: 0 6px 16px rgba(179,32,95,.25); }
-.btn.ghost { background: transparent; color: var(--rasp); border-color: var(--rasp); }
-.btn.ghost:hover { background: #fff; transform: translateY(-2px); }
-.btn.teal { background: var(--teal); border-color: var(--teal); color: #fff; }
-.btn.teal:hover { background: var(--teal-d); border-color: var(--teal-d); }
-.btn.sun { background: var(--sun); border-color: var(--sun); color: #2A1800; }
-.btn.sun:hover { background: #E09E19; }
-.btn.leaf { background: var(--leaf); border-color: var(--leaf); color: #fff; }
-.btn.leaf:hover { background: #23632E; }
-.btn-sm { font-size: 13px; padding: 6px 16px; }
-.foto {
-  background-color: #CFE8EC;
-  background-image: linear-gradient(135deg, #BFE3E6, #F7D6E4);
-  background-size: cover; background-position: center;
+
+.list-act { display: flex; flex-direction: column; gap: 28px; }
+.act-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+  padding: 24px 26px; display: flex; flex-direction: column; gap: 16px;
+  box-shadow: 0 6px 20px rgba(21,70,80,.05);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
-img { max-width: 100%; height: auto; display: block; }
+.act-card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(21,70,80,.10); border-color: #B8D4DC; }
+
+.act-head { display: flex; flex-direction: column; gap: 8px; }
+.chip-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.chip-badge {
+  font-size: 11.5px; font-weight: 700; color: #fff; background: var(--bg, var(--rasp));
+  border-radius: 999px; padding: 3px 12px; text-transform: uppercase; letter-spacing: .05em;
+}
+.chip-loc {
+  font-size: 12px; font-weight: 600; color: var(--mute); background: #F0F4F6;
+  border-radius: 999px; padding: 3px 12px;
+}
+.act-head h3 { font-size: clamp(19px, 2.2vw, 22px); color: var(--ink); }
+.act-head p { color: #4B5B65; font-size: 14px; line-height: 1.6; }
+
+.foto-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px; margin-top: 4px;
+}
+.foto-link {
+  position: relative; display: block; border-radius: 14px; overflow: hidden;
+  background: #EBF3F5; border: 1px solid #D9E6EA; aspect-ratio: 4/3;
+  box-shadow: 0 3px 10px rgba(21,70,80,.04); text-decoration: none; cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.foto-link:hover {
+  transform: translateY(-2px); border-color: var(--teal);
+  box-shadow: 0 8px 20px rgba(30,143,140,.20);
+}
+.foto-link img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.zoom-pill {
+  position: absolute; bottom: 8px; right: 8px;
+  background: rgba(31,42,51,0.80); backdrop-filter: blur(4px);
+  color: #fff; font-size: 10.5px; font-weight: 700;
+  padding: 4px 10px; border-radius: 999px;
+  opacity: 0; transition: opacity .2s ease; pointer-events: none;
+}
+.foto-link:hover .zoom-pill { opacity: 1; }
+
+@media (max-width: 680px) {
+  .act-card { padding: 18px 16px; }
+  .foto-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+}
+@media (max-width: 420px) {
+  .foto-grid { grid-template-columns: 1fr; }
+}
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
-<style>
-.sh { margin-bottom: 22px; }
-.sh h2 { font-size: clamp(26px, 4vw, 36px); color: var(--rasp-d); margin: 4px 0 6px; }
-.sub { color: var(--mute); max-width: 65ch; font-size: 14.5px; }
-.notice-box {
-  background: #FFF8E6; border: 1px solid #FFE08A; border-radius: 14px;
-  padding: 14px 18px; margin-bottom: 24px; font-size: 13.5px; color: #7A5500;
-}
-.kombel-card {
-  background: var(--card); border: 2px dashed #B8D4DC; border-radius: 20px;
-  padding: 26px 28px; display: flex; flex-direction: column; gap: 14px;
-  margin-bottom: 20px;
-}
-.kombel-card h3 { font-size: 21px; color: var(--ink); }
-.placeholder-tag {
-  display: inline-block; font-size: 12px; font-weight: 700; color: #7A5500;
-  background: #FFF0C2; border-radius: 999px; padding: 2px 10px;
-}
-.kombel-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 6px; }
-.field-box { background: #F6FAFB; padding: 10px 14px; border-radius: 10px; font-size: 13px; }
-.field-box b { display: block; color: var(--mute); font-size: 11px; text-transform: uppercase; margin-bottom: 2px; }
-</style>
+
 <div class="wrap">
   <div class="sh">
     <p class="eyebrow">Komunitas Belajar Sekolah</p>
     <h2>Partisipasi Komunitas IntraSekolah</h2>
-    <p class="sub">Rekam jejak pertemuan, refleksi mingguan, dan kolaborasi guru di lingkungan TK PGRI Prunggahan Kulon.</p>
+    <p class="sub">Dokumentasi nyata kegiatan kepanitiaan, pendampingan minat bakat, outing class edukatif, dan pengabdian sosial di lingkungan TK PGRI Prunggahan Kulon.</p>
+    <div class="badge-count">
+      <span>📸 10 Kegiatan Resmi &middot; 31 Foto Dokumentasi Terverifikasi</span>
+    </div>
   </div>
 
-  <div class="notice-box">
-    ℹ️ <b>Catatan Template Siap Isi:</b> Pada situs aslinya, halaman ini belum diisi konten. Berikut adalah kerangka kartu kegiatan resmi yang siap diisi dengan materi komunitas belajar Anda.
+  <div class="list-act">
+    <!-- Kegiatan 1 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#1E8F8C;">Pendampingan Prestasi</span>
+          <span class="chip-loc">Gugus PAUD Adenium &middot; Kec. Semanding</span>
+        </div>
+        <h3>Pendampingan Apresiasi Minat dan Bakat Anak "Mewarnai & Menyanyi"</h3>
+        <p>Pendampingan intensif bagi anak didik TK PGRI Prunggahan Kulon dalam mengasah keberanian tampil, kreativitas seni mewarnai, serta olah vokal pada ajang Apresiasi Minat dan Bakat Anak se-Gugus PAUD Adenium.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-01.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-01.jpg" alt="Pendampingan Minat Bakat Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-02.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-02.jpg" alt="Pendampingan Minat Bakat Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-03.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-03.jpg" alt="Pendampingan Minat Bakat Foto 3" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-04.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-04.jpg" alt="Pendampingan Minat Bakat Foto 4" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 2 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#B3205F;">Kepanitiaan PHBI</span>
+          <span class="chip-loc">TK PGRI Prunggahan Kulon</span>
+        </div>
+        <h3>Panitia Festival Muharram TK PGRI Prunggahan Kulon</h3>
+        <p>Amanah sebagai panitia perayaan Tahun Baru Islam 1 Muharram guna menanamkan nilai-nilai keimanan, kebersamaan, dan penguatan karakter profil pelajar Pancasila melalui pawai dan aneka kreasi islami anak.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-05.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-05.jpg" alt="Festival Muharram Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-06.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-06.jpg" alt="Festival Muharram Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 3 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#2F7D3B;">Gerakan Literasi</span>
+          <span class="chip-loc">Tahun 2025</span>
+        </div>
+        <h3>Pendampingan dalam "Festival Literasi Tahun 2025"</h3>
+        <p>Pendampingan berkelanjutan dalam menggalakkan minat baca dini, stimulasi kemampuan berbahasa reseptif dan ekspresif anak, serta pengenalan buku cerita bergambar interaktif pada Festival Literasi 2025.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-07.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-07.jpg" alt="Festival Literasi 2025 Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-08.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-08.jpg" alt="Festival Literasi 2025 Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-09.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-09.jpg" alt="Festival Literasi 2025 Foto 3" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 4 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#B3205F;">Kepanitiaan PHBI</span>
+          <span class="chip-loc">TK PGRI Prunggahan Kulon</span>
+        </div>
+        <h3>Panitia Peringatan Maulid Nabi Muhammad SAW</h3>
+        <p>Mengemban tugas kepanitiaan dalam menyelenggarakan peringatan kelahiran Nabi Muhammad SAW dengan rangkaian dongeng kisah teladan rasul, shalawat bersama, serta penanaman akhlak mulia sejak dini.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-10.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-10.jpg" alt="Maulid Nabi Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-11.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-11.jpg" alt="Maulid Nabi Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-12.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-12.jpg" alt="Maulid Nabi Foto 3" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 5 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#1E8F8C;">Kemitraan & Ekstrakurikuler</span>
+          <span class="chip-loc">Yamaha Motor Show</span>
+        </div>
+        <h3>Pendampingan Lomba Mewarnai Yamaha Motor Show</h3>
+        <p>Mendampingi anak-anak dalam event kemitraan publik lomba mewarnai Yamaha Motor Show guna memperluas pengalaman sosial dan mengasah rasa percaya diri anak di luar lingkungan sekolah.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-13.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-13.jpg" alt="Lomba Mewarnai Yamaha Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-14.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-14.jpg" alt="Lomba Mewarnai Yamaha Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 6 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#2F7D3B;">Edukasi Lapangan</span>
+          <span class="chip-loc">TK PGRI Prunggahan Kulon</span>
+        </div>
+        <h3>Panitia Kunjungan POLSANAK (Polisi Sahabat Anak)</h3>
+        <p>Inisiasi dan kepanitiaan program pembelajaran kontekstual POLSANAK, menghadirkan aparat kepolisian ramah anak untuk mengenalkan rambu lalu lintas, disiplin keselamatan jalan raya, dan profesi penegak hukum.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-15.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-15.jpg" alt="Kunjungan POLSANAK Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-16.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-16.jpg" alt="Kunjungan POLSANAK Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-17.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-17.jpg" alt="Kunjungan POLSANAK Foto 3" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 7 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#1E8F8C;">Kearifan Lokal</span>
+          <span class="chip-loc">Sentra Gerabah Kelurahan Karang, Tuban</span>
+        </div>
+        <h3>Panitia Kunjungan Edukasi ke Pengrajin Gerabah Kelurahan Karang</h3>
+        <p>Kegiatan belajar di luar kelas (*outdoor learning*) mengenalkan warisan budaya kerajinan tanah liat tradisional secara langsung, melatih motorik halus anak melalui praktik membentuk karya gerabah mini.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-18.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-18.jpg" alt="Kunjungan Gerabah Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-19.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-19.jpg" alt="Kunjungan Gerabah Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 8 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#B3205F;">Aksi Sosial & Ramadhan</span>
+          <span class="chip-loc">Lingkungan TK PGRI Prunggahan Kulon</span>
+        </div>
+        <h3>Panitia Pembagian Takjil TK PGRI Prunggahan Kulon</h3>
+        <p>Kepanitiaan bakti sosial Ramadhan berbagi takjil kepada masyarakat sekitar sekolah, menanamkan nilai kedermawanan, empati kemanusiaan, serta rasa syukur dalam diri anak sejak usia dini.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-20.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-20.jpg" alt="Pembagian Takjil Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-21.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-21.jpg" alt="Pembagian Takjil Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-22.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-22.jpg" alt="Pembagian Takjil Foto 3" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-23.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-23.jpg" alt="Pembagian Takjil Foto 4" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-24.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-24.jpg" alt="Pembagian Takjil Foto 5" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 9 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#F4B52E;color:#2A1800;">Mitigasi Bencana</span>
+          <span class="chip-loc">Kantor BPBD Kabupaten Tuban</span>
+        </div>
+        <h3>Panitia Kunjungan Edukatif ke BPBD Kabupaten Tuban</h3>
+        <p>Mempersiapkan dan memandu kunjungan edukasi mitigasi bencana di Badan Penanggulangan Bencana Daerah (BPBD) Kabupaten Tuban, mengenalkan tindakan penyelamatan diri saat gempa dan simulasi penanganan kebakaran bersama tim damkar.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-25.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-25.jpg" alt="Kunjungan BPBD Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-26.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-26.jpg" alt="Kunjungan BPBD Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-27.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-27.jpg" alt="Kunjungan BPBD Foto 3" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-28.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-28.jpg" alt="Kunjungan BPBD Foto 4" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-29.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-29.jpg" alt="Kunjungan BPBD Foto 5" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Kegiatan 10 -->
+    <article class="act-card">
+      <div class="act-head">
+        <div class="chip-row">
+          <span class="chip-badge" style="--bg:#1E8F8C;">Layanan & Advokasi Sekolah</span>
+          <span class="chip-loc">TK PGRI Prunggahan Kulon</span>
+        </div>
+        <h3>Sosialisasi Program Indonesia Pintar (PIP) oleh Operator Sekolah</h3>
+        <p>Peran aktif sebagai operator sekolah dalam memberikan sosialisasi, pemaparan teknis, dan verifikasi berkas penerima bantuan Program Indonesia Pintar (PIP) bagi wali murid demi menjamin hak kelangsungan pendidikan anak didik.</p>
+      </div>
+      <div class="foto-grid">
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-30.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-30.jpg" alt="Sosialisasi PIP Foto 1" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+        <a class="foto-link" href="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-31.jpg" target="_blank" rel="noopener" title="Klik untuk membuka resolusi penuh">
+          <img src="https://file.garden/aehADr1aKQol7cT9/Bu%20Ferry/09-komunitas-intrasekolah-img-31.jpg" alt="Sosialisasi PIP Foto 2" loading="lazy">
+          <span class="zoom-pill">🔍 Buka Resolusi Penuh</span>
+        </a>
+      </div>
+    </article>
   </div>
-
-  <article class="kombel-card">
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-      <span class="placeholder-tag">[SIAP DIISI - KEGIATAN KOMBEL 1]</span>
-      <span style="font-size:13px;color:var(--mute);font-weight:600;">[ISI TANGGAL PELAKSANAAN]</span>
-    </div>
-    <h3>[ISI JUDUL KEGIATAN KOMBEL INTRASEKOLAH]</h3>
-    <p style="color:#4B5B65;font-size:14.5px;">[Tuliskan uraian kegiatan: topik diskusi, analisis capaian perkembangan anak didik, perancangan modul projek P5 bersama rekan guru di TK PGRI Prunggahan Kulon, dan tindak lanjut perbaikan kelas.]</p>
-    
-    <div class="kombel-fields">
-      <div class="field-box">
-        <b>Tempat Pelaksanaan</b>
-        [ISI: TK PGRI Prunggahan Kulon]
-      </div>
-      <div class="field-box">
-        <b>Peserta / Rekan Terlibat</b>
-        [ISI: Kepala Sekolah & Seluruh Guru Kelompok A & B]
-      </div>
-      <div class="field-box">
-        <b>Hasil / Dampak</b>
-        [ISI: Kesepakatan Asesmen / Modul Ajar Bersama]
-      </div>
-    </div>
-
-    <div style="display:flex;gap:10px;margin-top:8px;">
-      <a class="btn btn-sm ghost" href="#" target="_blank" rel="noopener">[Unggah Foto Dokumentasi ↗]</a>
-      <a class="btn btn-sm ghost" href="#" target="_blank" rel="noopener">[Unggah Notula / Berkas ↗]</a>
-    </div>
-  </article>
-
-  <article class="kombel-card">
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-      <span class="placeholder-tag">[SIAP DIISI - KEGIATAN KOMBEL 2]</span>
-      <span style="font-size:13px;color:var(--mute);font-weight:600;">[ISI TANGGAL PELAKSANAAN]</span>
-    </div>
-    <h3>[ISI JUDUL DISKUSI REFLEKSI PEMBELAJARAN]</h3>
-    <p style="color:#4B5B65;font-size:14.5px;">[Tuliskan uraian evaluasi berkala proses pembelajaran, berbagi kendala siswa di kelas masing-masing, serta penyusunan media ajar kolaboratif.]</p>
-    
-    <div class="kombel-fields">
-      <div class="field-box">
-        <b>Tempat Pelaksanaan</b>
-        [ISI: Ruang Guru TK PGRI Prunggahan Kulon]
-      </div>
-      <div class="field-box">
-        <b>Fasilitator / Narasumber</b>
-        [ISI: Ketua Komunitas Belajar Sekolah]
-      </div>
-      <div class="field-box">
-        <b>Dokumen Pendukung</b>
-        [ISI: Rencana Kerja Komunitas Belajar]
-      </div>
-    </div>
-  </article>
 </div>
 
 <!-- END BLOCK: 09-komunitas-intrasekolah-blok1.html -->
